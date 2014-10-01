@@ -1,6 +1,6 @@
 /* global mmcore, $ */
 
-(function () {
+(function() {
     'use strict';
 
     /**
@@ -16,11 +16,17 @@
         this.actionAttr = actionAttr || false;
     }
 
-    SetAction.prototype.deffered = function () {
+    SetAction.prototype.deffered = function() {
         mmcore.$Action(this.actionName, this.actionValue, this.actionAttr);
     };
-    SetAction.prototype.push = function () {
-        mmcore.SetAction(this.actionName, this.actionValue, this.actionAttr);
+    SetAction.prototype.push = function() {
+        if (Object.prototype.toString.call(this.actionAttr) === '[object Array]') {
+            for (var i = 0; i < this.actionAttr.length; i++) {
+                mmcore.SetAction(this.actionName, this.actionValue, this.actionAttr[i]);
+            }
+        } else {
+            mmcore.SetAction(this.actionName, this.actionValue, this.actionAttr);
+        }
         mmcore._async = true;
         mmcore.SetPageID('event');
         mmcore.CGRequest();
