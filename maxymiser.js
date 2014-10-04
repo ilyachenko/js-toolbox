@@ -37,5 +37,8 @@
 
     /* Track Deffered Action */
     new SetAction('T14_Edit_Cover', 1, 'attr').deffered();
+    
+    /* Track Deffered Action with array */
+    new SetAction('T14_Edit_Cover', 1, ['attr1', 'attr2', 'attr3']).deffered();
 
 })();
