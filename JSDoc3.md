@@ -1,36 +1,10 @@
 # JSDoc 3
 
 [Namepaths in JSDoc 3](#namepaths)
+
 [Inline tags](#inlineTags)
+
 [@abstract (synonyms: @virtual)](#abstract)
-[@access](#access)
-[@alias]()
-[@augments (synonyms: @extends)](#)
-[@author](#)
-[@borrows](#)
-[@callback](#)
-[@class](#)
-[@classdesc](#)
-[@constant (synonyms: @const)](#)
-[@constructs](#)
-[@copyright](#)
-[@default (synonyms: @defaultvalue)](#)
-[@deprecated](#)
-[@description (synonyms: @desc)](#)
-[@enum](#)
-[@event](#)
-[@example](#)
-[@exports](#)
-[@external (synonyms: @host)](#)
-[@file (synonyms: @fileoverview, @overview)](#)
-[@fires (synonyms: @emits)](#)
-[@function (synonyms: @func, @method)](#)
-[@global](#)
-[@ignore](#)
-[@inner](#)
-[@instance](#)
-[](#)
-[](#)
 
 
 
