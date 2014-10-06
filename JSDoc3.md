@@ -91,4 +91,3 @@ The @class tag marks a function as being a constructor, meant to be called with 
 #### [@private](http://example.dyachen.com/JSDoc/Documents.html) or **@access private**
 
 #### [@public](http://example.dyachen.com/JSDoc/global.html#sum) or **@access public**
-
