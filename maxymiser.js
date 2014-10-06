@@ -5,15 +5,15 @@
 
     /**
      * Set Action snippet (c) Dyachenko
-     * @param actionName
-     * @param actionValue
-     * @param actionAttr
-     * @constructor
+     * @class
+     * @param {string} actionName
+     * @param {number} actionValue
+     * @param {string} actionAttr
      */
     function SetAction(actionName, actionValue, actionAttr) {
         this.actionName = actionName;
         this.actionValue = actionValue;
-        this.actionAttr = actionAttr || false;
+        this.actionAttr = actionAttr || "";
     }
 
     SetAction.prototype.deffered = function() {
