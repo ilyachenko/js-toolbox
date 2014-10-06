@@ -29,7 +29,7 @@ Person.say  // the static method named "say."
 Person~say  // the inner method named "say."
 ```
 
-[Example](http://example.dyachen.com/JSDoc/Person.html)
+[Example](http://example.dyachen.com/JSDoc/out/Person.html)
 
 #### Inline tags (for description)
 
@@ -44,11 +44,11 @@ Person~say  // the inner method named "say."
  */
 ```
 
-#### [@abstract](http://example.dyachen.com/JSDoc/DairyProduct.html) (synonyms: @virtual)
+#### [@abstract](http://example.dyachen.com/JSDoc/out/DairyProduct.html) (synonyms: @virtual)
 
 The @abstract tag identifies members that must be implemented (or overridden) by objects that inherit the member.
 
-#### <a href="http://example.dyachen.com/JSDoc/Animal.html" target="_blank">@augments</a> (synonyms: @extends) <namepath>
+#### <a href="http://example.dyachen.com/JSDoc/out/Animal.html" target="_blank">@augments</a> (synonyms: @extends) <namepath>
 
 The @augments or @extends tag marks a symbol as augmenting another symbol.
 
@@ -61,7 +61,7 @@ The @augments or @extends tag marks a symbol as augmenting another symbol.
 function MyClass() {}
 ```
 
-#### [@borrows](http://example.dyachen.com/JSDoc/util.html)
+#### [@borrows](http://example.dyachen.com/JSDoc/out/util.html)
 The @borrows tag allows you to add documentation for another symbol to your documentation.
 
 This tag would be useful if you had more than one way to reference a function, but you didn't want to duplicate the same documentation in two places.
@@ -76,18 +76,18 @@ Once you define a callback, you can use it in the same way as a custom type defi
 
 If you want a callback to be displayed with the type definitions for a specific class, you can give the callback a namepath indicating that it is an inner function of that class. You can also define a global callback type that is referenced from multiple classes.
 
-[Class-specific callback](http://example.dyachen.com/JSDoc/Requester1.html)
+[Class-specific callback](http://example.dyachen.com/JSDoc/out/Requester1.html)
 
-[Global callback](http://example.dyachen.com/JSDoc/Requester2.html)
+[Global callback](http://example.dyachen.com/JSDoc/out/Requester2.html)
 
-#### [@class, @classdesc](http://example.dyachen.com/JSDoc/MyClass.html)
+#### [@class, @classdesc](http://example.dyachen.com/JSDoc/out/MyClass.html)
 
-#### [@constant](http://example.dyachen.com/JSDoc/constant.js.html) (synonyms: @const)
+#### [@constant](http://example.dyachen.com/JSDoc/out/constant.js.html) (synonyms: @const)
 
 The @class tag marks a function as being a constructor, meant to be called with the new keyword to return an instance.
 
-#### [@protected](http://example.dyachen.com/JSDoc/Thingy.html) or **@access protected**
+#### [@protected](http://example.dyachen.com/JSDoc/out/Thingy.html) or **@access protected**
 
-#### [@private](http://example.dyachen.com/JSDoc/Documents.html) or **@access private**
+#### [@private](http://example.dyachen.com/JSDoc/out/Documents.html) or **@access private**
 
-#### [@public](http://example.dyachen.com/JSDoc/global.html#sum) or **@access public**
+#### [@public](http://example.dyachen.com/JSDoc/out/global.html#sum) or **@access public**
