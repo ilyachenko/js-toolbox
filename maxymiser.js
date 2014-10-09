@@ -10,7 +10,7 @@
      * @param {number} actionValue
      * @param {string} actionAttr
      */
-    function SetAction(actionName, actionValue, actionAttr) {
+    SetAction = function(actionName, actionValue, actionAttr) {
         this.actionName = actionName;
         this.actionValue = actionValue;
         this.actionAttr = actionAttr || "";
