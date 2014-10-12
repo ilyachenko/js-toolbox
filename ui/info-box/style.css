@@ -1,0 +1,173 @@
+.wrapper {
+    position: absolute;
+    width: 40%;
+    height: 30%;
+    left: 50%;
+    top: 50%;
+    margin-left: -10%;
+    margin-top: -15%;
+}
+
+.info-box {
+    width: 312px;
+    height: 326px;
+    /*background-image: url('img/comp_plate_graybasic.png');*/
+    display: block;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.info-box .content-wrapper {
+    height: 278px;
+}
+
+.info-box .img {
+    display: inline-block;
+    /*background: url('img/comp_plate_promo1.png');*/
+    width: 307px;
+    height: 200px;
+    margin: 0px 0px 0px 1px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.info-box .description {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info-box .description .header {
+    overflow: hidden;
+    color: #FF6200;
+    font-size: 1.20em;
+    font-weight: bold;
+    text-align: left;
+    height: 24px;
+    display: inline-block;
+}
+
+.info-box .description .body {
+    margin-top: 3px;
+    display: inline-block;
+    height: 28px;
+    font-size: 0.7em;
+    overflow: hidden;
+}
+
+.info-box .description .note {
+    color: #969696;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+.info-box .description .details {
+    display:table;
+}
+
+.info-box .description .details>span {
+    display:table-cell;
+    vertical-align: top;
+    color: #FF6200;
+    font-size: 0.50em;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-box .description .details>span:hover {
+    color: #592600;
+}
+
+.info-box .navigation {
+    display: block;
+    width: 290px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.info-box .navigation .left .btn-left {
+    float: left;
+}
+
+.info-box .navigation .left .btn-right {
+    float: left;
+}
+
+.info-box .navigation .btn-wrapper {
+    display: block;
+    width: 68px;
+    height: 26px;
+    color: #989898;
+    cursor: pointer;
+}
+
+.info-box .navigation .btn-wrapper:hover {
+    color: white;
+    text-shadow: 1px 1px #474747;
+}
+
+.info-box .navigation .left .btn-left {
+    background-image: url("img/button_bg_white_left.png");
+    float: left;
+}
+
+.info-box .navigation .left .btn-left .arrow {
+    background: url("img/btn_ic_gray_left.png") no-repeat;
+    display: block;
+    width: 22px;
+    height: 100%;
+    margin-top: 8px;
+    margin-left: 5px;
+    float: left;
+}
+
+.info-box .navigation .text {
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: 0.80em;
+}
+
+.info-box .navigation .left .btn-left .text {
+    float: right;
+    padding-right: 10px;
+}
+
+.info-box .navigation .left .btn-left:hover {
+    background: url("img/button_bg_orange_left.png") no-repeat;
+}
+
+.info-box .navigation .btn-right {
+    background: url("img/button_bg_white_right.png") no-repeat;
+}
+
+.info-box .navigation .btn-right:hover {
+    background: url("img/button_bg_orange_right.png") no-repeat;
+}
+
+.info-box .navigation .btn-right .arrow {
+    background: url("img/btn_ic_gray_right.png") no-repeat;
+    display: block;
+    width: 16px;
+    height: 100%;
+    margin-top: 8px;
+    float: right;
+}
+
+.info-box .navigation .btn-right .text {
+    margin-left: 10px;
+    display: block;
+    float: left;
+    height: 100%;
+    width: 36px;
+}
+
+.info-box .navigation .right .btn-wrapper {
+    color: #FF6200;
+}
+
+.info-box .navigation .right .btn-wrapper:hover {
+    color: white;
+    text-shadow: 1px 1px #474747;
+}
+
+.info-box .navigation .right {
+    float: right;
+}
