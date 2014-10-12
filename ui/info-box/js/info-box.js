@@ -10,7 +10,7 @@
             'background': 'comp_plate_graybasic.png'
         }, options);
 
-        var body = '<div class="content-wrapper"><div class="img"></div><div class="description"><span class="header"></span><span class="body"></span><span class="details">show details</span></div></div><div class="navigation"><div class="left"><div class="btn-left btn-wrapper"><div class="arrow"></div><div class="text">Prev</div></div><div class="btn-right btn-wrapper"><div class="text">Next</div><div class="arrow"></div></div></div><div class="right"><div class="btn-right btn-wrapper"><div class="text">Find</div><div class="arrow"></div></div></div></div>';
+        var body = '<div class="content-wrapper"><div class="img"></div><div class="description"><span class="header"></span><span class="body"></span><div class="details"><span>show details</span></div></div></div><div class="navigation"><div class="left"><div class="btn-left btn-wrapper"><div class="arrow"></div><div class="text">Prev</div></div><div class="btn-right btn-wrapper"><div class="text">Next</div><div class="arrow"></div></div></div><div class="right"><div class="btn-right btn-wrapper"><div class="text">Find</div><div class="arrow"></div></div></div></div>';
 
         var createInfoBox = function (div, data) {
             var $infoBox = $(div), count = 0;
@@ -51,7 +51,7 @@
                 window.open(data[count].productUrl);
             });
 
-            $infoBox.find('.details').click(function(){
+            $infoBox.find('.details>span').click(function(){
                 if($infoBox.find('.img').height() !== 0){
                     $infoBox.find('.img').animate({
                         height: 0

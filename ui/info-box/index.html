@@ -60,7 +60,6 @@
             height: 28px;
             font-size: 0.7em;
             overflow: hidden;
-            margin-bottom: -8px;
         }
 
         .info-box .description .note {
@@ -69,22 +68,25 @@
             font-size: 0.9em;
         }
 
-
         .info-box .description .details {
+            display:table;
+        }
+
+        .info-box .description .details>span {
+            display:table-cell;
+            vertical-align: top;
             color: #FF6200;
             font-size: 0.50em;
             border-bottom: 1px solid;
-            padding-bottom: 0.4px;
             font-weight: bold;
             cursor: pointer;
         }
 
-        .info-box .description .details:hover {
+        .info-box .description .details>span:hover {
             color: #592600;
         }
 
         .info-box .navigation {
-            background-color: lightgrey;
             display: block;
             width: 290px;
             margin-top: 12px;
