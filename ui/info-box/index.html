@@ -8,23 +8,22 @@
     <script type='text/javascript' src='js/info-box.js'></script>
 </head>
 <body>
-<div class="wrapper">
-    <div class="info-box" id="firstInfoBox"></div>
-    <br/>
-    <div class="info-box" id="secondInfoBox"></div>
-</div>
-
+    <div style="float: left">
+        <div class="info-box" id="firstInfoBox"></div>
+        <br/>
+        <div class="info-box" id="secondInfoBox"></div>
+    </div>
 <script>
-
     $('#firstInfoBox').createInfoBox({
         data : 'data/info_box.json'}
     );
 
     $('#secondInfoBox').createInfoBox({
         data : 'data/info_box.json',
-        background: 'comp_plate_graybasic_dark.png'
+        background: 'comp_plate_graybasic_dark.png',
+        'btnArrowRight': 'btn_ic_brn_right.png',
+        'btnArrowLeft': 'btn_ic_brn_left.png'
     } );
-
 </script>
 </body>
 </html>

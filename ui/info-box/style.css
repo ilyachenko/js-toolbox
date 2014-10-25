@@ -1,17 +1,6 @@
-.wrapper {
-    position: absolute;
-    width: 40%;
-    height: 30%;
-    left: 50%;
-    top: 50%;
-    margin-left: -10%;
-    margin-top: -15%;
-}
-
 .info-box {
-    width: 312px;
-    height: 326px;
-    /*background-image: url('img/comp_plate_graybasic.png');*/
+    /*width: 312px;*/
+    /*height: 326px;*/
     display: block;
     font-family: Tahoma, Geneva, sans-serif;
 }
@@ -22,7 +11,6 @@
 
 .info-box .img {
     display: inline-block;
-    /*background: url('img/comp_plate_promo1.png');*/
     width: 307px;
     height: 200px;
     margin: 0px 0px 0px 1px;
@@ -110,7 +98,6 @@
 }
 
 .info-box .navigation .left .btn-left .arrow {
-    background: url("img/btn_ic_gray_left.png") no-repeat;
     display: block;
     width: 22px;
     height: 100%;
@@ -143,7 +130,6 @@
 }
 
 .info-box .navigation .btn-right .arrow {
-    background: url("img/btn_ic_gray_right.png") no-repeat;
     display: block;
     width: 16px;
     height: 100%;

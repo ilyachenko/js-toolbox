@@ -7,7 +7,9 @@
 
         // default settings
         var settings = $.extend({
-            'background': 'comp_plate_graybasic.png'
+            'background': 'comp_plate_graybasic.png',
+            'btnArrowRight': 'btn_ic_gray_right.png',
+            'btnArrowLeft': 'btn_ic_gray_left.png'
         }, options);
 
         var body = '<div class="content-wrapper"><div class="img"></div><div class="description"><span class="header"></span><span class="body"></span><div class="details"><span>show details</span></div></div></div><div class="navigation"><div class="left"><div class="btn-left btn-wrapper"><div class="arrow"></div><div class="text">Prev</div></div><div class="btn-right btn-wrapper"><div class="text">Next</div><div class="arrow"></div></div></div><div class="right"><div class="btn-right btn-wrapper"><div class="text">Find</div><div class="arrow"></div></div></div></div>';
@@ -20,10 +22,14 @@
             $(body).appendTo(div);
 
             var setDataToBox = function(){
+                $infoBox.css('width', '312');
+                $infoBox.css('height', '326');
                 $infoBox.find('.img').css('background-image', "url('img/" + data[count].img + "')");
                 $infoBox.find('.description .header').text(data[count].title);
                 $infoBox.find('.description .body').text(data[count].description);
                 $infoBox.find('.description .body').append('<div class="note">' + data[count].note + '</div>');
+                $infoBox.find('.navigation .btn-right .arrow').css('background', "url('img/" + settings.btnArrowRight + "') no-repeat");
+                $infoBox.find('.navigation .btn-left .arrow').css('background', "url('img/" + settings.btnArrowLeft + "') no-repeat");
             };
             setDataToBox();
 
@@ -85,7 +91,6 @@
                 });
             });
         }();
-
 
     };
 })(jQuery);
