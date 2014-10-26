@@ -4,6 +4,7 @@ Bookmarks
 ### OOP articles
 
 * [ООП и наследование в JavaScript](http://popel-studio.com/blog/article/oop-i-nasledovanie-v-javascript.html)
+* [OOP patterns by javascript.info](http://javascript.info/tutorial/oop)
 
 ### Conferences
 
