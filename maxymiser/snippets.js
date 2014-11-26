@@ -19,7 +19,7 @@
     SetAction.prototype.deffered = function() {
         mmcore.$Action(this.actionName, this.actionValue, this.actionAttr);
     };
-    SetAction.prototype.push = function() {
+    SetAction.prototype.push = function (callback) {
         if (Object.prototype.toString.call(this.actionAttr) === '[object Array]') {
             for (var i = 0; i < this.actionAttr.length; i++) {
                 mmcore.SetAction(this.actionName, this.actionValue, this.actionAttr[i]);
@@ -29,7 +29,7 @@
         }
         mmcore._async = true;
         mmcore.SetPageID('event');
-        mmcore.CGRequest();
+        mmcore.CGRequest(callback || {});
     };
 
     /* Track Action */
