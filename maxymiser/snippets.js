@@ -8,7 +8,7 @@
      * @class
      * @param {string} actionName
      * @param {number} actionValue
-     * @param {string} actionAttr
+     * @param {string} [actionAttr]
      */
     var SetAction = function(actionName, actionValue, actionAttr) {
         this.actionName = actionName;
