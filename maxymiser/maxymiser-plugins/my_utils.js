@@ -1,4 +1,3 @@
-/* --T15-- */
 /* global mmcore */
 
 (function (prefix) {
