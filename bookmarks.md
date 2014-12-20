@@ -15,6 +15,7 @@ _Video from conference._
 
 ### JS stuff
 
+* [MicroJS](http://microjs.com)
 * [io-2012-slides](https://code.google.com/p/io-2012-slides/)<br>
 _Slider viewer on_
 
