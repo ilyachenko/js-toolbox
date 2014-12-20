@@ -13,14 +13,15 @@
             console.log(foo);
             console.log(bar);
         });
-//        var module1, module2;
-//        require(['test'], function (test) {
-//            module1 = test;
-//        });
-//        require(['test'], function (test) {
-//            module2 = test;
-//            console.log(module1 === module2);
-//        });
+
+        var module1, module2;
+        require(['test'], function (test) {
+            module1 = test;
+        });
+        require(['test'], function (test) {
+            module2 = test;
+            console.log(module1 === module2);
+        });
     </script>
 </head>
 <body>

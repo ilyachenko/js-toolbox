@@ -1,1 +1,7 @@
-console.log('1');
+define('test', [], function() {
+  return {
+    testMethod: function() {
+      console.log('test');
+    }
+  };
+});

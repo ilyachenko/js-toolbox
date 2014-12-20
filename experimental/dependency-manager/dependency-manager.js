@@ -3,10 +3,9 @@
 
     var DependencyManager = function () {
         this.requiredClasses = {};
-        this.requiredCb = {};
     };
 
-    DependencyManager.prototype.waitForAllDependenciesInClasses = function (arr) {
+    DependencyManager.prototype.waitForAllDependenciesInClasses = function (arr, cb) {
         var myVar = setInterval(function () {
             myTimer();
         }, 1000);
@@ -21,54 +20,67 @@
                 array.push(dm.requiredClasses[currentKey]);
             }
             clearInterval(myVar);
-            dm.requiredCb[arr.toString()].apply(null, array);
+            cb.apply(null, array);
+        }
+    };
+
+    DependencyManager.prototype.require = function (arr, cb) {
+        for (var i = 0; i < arr.length; i++) {
+            dm.readFile(arr[i]);
+        }
+        dm.waitForAllDependenciesInClasses(arr, cb);
+    };
+
+    DependencyManager.prototype.readFile = function(name){
+        if(dm.requiredClasses.name) return;
+
+        var s = document.createElement('script');
+        s.src = name + ".js";
+        s.type = 'text/javascript';
+        try {
+            document.head.appendChild(s);
+        }
+        catch (e) {
+
         }
     };
 
     var dm = new DependencyManager();
 
     window.define = function (name, arr, cb) {
-
-        //if (arr.length === 0) {
+        if(arr.length === 0){
             if (typeof dm.requiredClasses[name] === "undefined") {
                 dm.requiredClasses[name] = cb();
             }
-        //}
-//        else {
-//            var myVar = setInterval(function () {
-//                myTimer(arr, cb);
-//            }, 1000);
-//        }
-//
-//        function myTimer(arr, cb) {
-//            var array = [];
-//            for (var i = 0; i < arr.length; i++) {
-//                debugger
-//                var currentKey = arr[i];
-//                if (typeof dm.requiredClasses[currentKey] === "undefined") {
-//                    return;
-//                }
-//                array.push(dm.requiredClasses[currentKey]);
-//            }
-//            clearInterval(myVar);
-//            dm.requiredCb[arr.toString()].apply(null, array);
-//        }
-    };
-
-    window.require = function (arr, cb) {
-        dm.requiredCb[arr.toString()] = cb;
-
-        for (var i = 0; i < arr.length; i++) {
-            var s = document.createElement('script');
-            s.src = arr[i] + ".js";
-            s.type = 'text/javascript';
-            try {
-                document.head.appendChild(s);
-            }
-            catch (e) {
-
-            }
         }
-        dm.waitForAllDependenciesInClasses(arr);
+        else {
+            var array = [name].concat(arr);
+            for (var i = 0; i < arr.length; i++) {
+                if (!dm.requiredClasses[arr[i]]){
+                    dm.readFile(arr[i]);
+                }
+            }
+
+            var myVar = setInterval(function () {
+                myTimer(name);
+            }, 1000);
+
+            var myTimer = function(name) {
+                var array = [];
+                for (var i = 0; i < arr.length; i++) {
+                    var currentKey = arr[i];
+                    if (typeof dm.requiredClasses[currentKey] === "undefined") {
+                        return;
+                    }
+                    array.push(dm.requiredClasses[currentKey]);
+                }
+                clearInterval(myVar);
+
+                dm.requiredClasses[name] = cb.apply(null, array);
+            };
+
+        }
     };
+
+    window.require = dm.require;
 })();
